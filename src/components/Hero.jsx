@@ -16,7 +16,6 @@ const Hero = () => {
           transition={{
             duration: 0.6,
             ease: "easeOut",
-            damping: 20,
             stiffness: 300,
           }}
           className="md:w-1/2 text-center md:text-left"
@@ -24,7 +23,7 @@ const Hero = () => {
           <motion.h1
             className="text-4xl md:text-8xl  font-extrabold mb-6 leading-tight"
             initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             Welcome to <span className="text-gray-400">Our Website</span>
@@ -32,7 +31,7 @@ const Hero = () => {
           <motion.p
             className="text-lg md:text-xl text-gray-300 mb-8"
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             Discover amazing things with us.
