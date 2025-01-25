@@ -54,7 +54,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <FaInstagram size={30} />
+                <FaInstagram size={30} className="text-gray-400" />
               </motion.a>
               <motion.a
                 href="#"
@@ -62,7 +62,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <FaLinkedin size={30} />
+                <FaLinkedin size={30} className="text-gray-400" />
               </motion.a>
               <motion.a
                 href="#"
@@ -70,7 +70,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <FaTwitter size={30} />
+                <FaTwitter size={30} className="text-gray-400" />
               </motion.a>
             </div>
           </motion.div>
