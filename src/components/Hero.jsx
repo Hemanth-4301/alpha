@@ -7,7 +7,7 @@ const Hero = () => {
   const navigate = useNavigate();
   return (
     <section
-      className="bg-black text-white py-16 sm:py-20 md:py-32 flex items-center overflow-hidden"
+      className="bg-black text-white  pt-24 md:py-32 flex items-center overflow-hidden"
       id="home"
     >
       <div className="container mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center gap-8">
