@@ -9,13 +9,14 @@ import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white pt-8 pb-8 border-t border-slate-400">
+    <footer className="bg-black text-white pt-8 pb-8 border-t border-slate-600">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
           >
             <h3 className="text-xl font-bold mb-4">Location</h3>
             <p className="flex items-center text-gray-300">
@@ -27,6 +28,7 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
           >
             <h3 className="text-xl font-bold mb-4">Contact</h3>
             <p className="flex items-center mb-2 text-gray-300">
@@ -42,6 +44,7 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
           >
             <h3 className="text-xl font-bold mb-4">Social Media</h3>
             <div className="flex   gap-5 justify-start">
@@ -78,6 +81,7 @@ const Footer = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
         >
           © 2025 Your Company. All rights reserved.
         </motion.div>
