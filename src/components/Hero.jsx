@@ -23,13 +23,21 @@ const Hero = () => {
           className="md:w-1/2 text-center md:text-left"
         >
           <motion.h1
-            className="text-5xl sm:text-5xl md:text-5xl lg:text-7xl font-extrabold mb-6 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold mb-6 leading-tight"
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             Welcome to
-            <span className="text-gray-400"> ALPHA Tinkerer's</span>
+            <span
+              className="text-gray-400 text-5xl md:text-5xl lg:text-7xl"
+              style={{
+                letterSpacing: "1px",
+              }}
+            >
+              {" "}
+              ALPHA Tinkerer's
+            </span>
           </motion.h1>
           <motion.p
             className="text-base sm:text-lg md:text-xl text-gray-300 mb-8"
