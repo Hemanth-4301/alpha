@@ -5,20 +5,13 @@ import {
   EnvelopeIcon,
   PhoneIcon,
 } from "@heroicons/react/24/outline";
-import {
-  FaLinkedin,
-  FaTwitter,
-  FaGithub,
-  FaEnvelope,
-  FaFacebook,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-10 border-t border-slate-400">
+    <footer className="bg-black text-white pt-8 pb-8 border-t border-slate-400">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -81,9 +74,9 @@ const Footer = () => {
         </div>
 
         <motion.div
-          className="mt-8 text-center text-gray-400"
+          className="mt-12  text-center text-gray-400"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           © 2025 Your Company. All rights reserved.

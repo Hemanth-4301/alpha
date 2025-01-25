@@ -6,6 +6,7 @@ import HomePage from "./components/HomePage";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import "./App.css";
+import About from "./components/About";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/team" element={<Team />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </HashRouter>
