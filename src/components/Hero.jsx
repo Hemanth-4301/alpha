@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import robo from "../assets/robo2.png";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section
       className="bg-black text-white py-28 md:py-32 flex items-center overflow-hidden"
@@ -21,12 +23,13 @@ const Hero = () => {
           className="md:w-1/2 text-center md:text-left"
         >
           <motion.h1
-            className="text-4xl md:text-8xl  font-extrabold mb-6 leading-tight"
+            className="text-4xl lg:text-8xl  font-extrabold mb-6 leading-tight"
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Welcome to <span className="text-gray-400">Our Website</span>
+            Welcome to
+            <span className="text-gray-400 "> ALPHA Tinkerer's</span>
           </motion.h1>
           <motion.p
             className="text-lg md:text-xl text-gray-300 mb-8"
@@ -34,13 +37,14 @@ const Hero = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            Discover amazing things with us.
+            Where Curiosity Meets Creation
           </motion.p>
           <div className="flex justify-center md:justify-start space-x-4">
             <motion.button
               className="bg-white text-black px-6 py-3 rounded-full shadow-md hover:bg-gray-200 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => navigate("/about#about")}
             >
               About Us
             </motion.button>

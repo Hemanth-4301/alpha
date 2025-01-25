@@ -44,7 +44,6 @@ const Events = () => {
         </motion.div>
 
         <div className="relative">
-          {/* Vertical timeline */}
           <div className="absolute left-1/2 transform -translate-x-1/2 sm:w-1 w-0.5 bg-primary-lightBlue/30 h-full"></div>
 
           {events.map((event, index) => (
