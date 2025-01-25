@@ -1,17 +1,18 @@
 import { useState } from "react";
-import { Link } from "react-scroll";
+import { HashLink } from "react-router-hash-link";
 import { motion } from "framer-motion";
-import { HiOutlineMenuAlt4 } from "react-icons/hi"; // New icon for menu
-import { IoCloseSharp } from "react-icons/io5"; // New icon for close
+import { HiOutlineMenuAlt4 } from "react-icons/hi";
+import { IoCloseSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", to: "home" },
-    { name: "Team", to: "team" },
-    { name: "Events", to: "events" },
-    { name: "Vision", to: "vision" },
+    { name: "Home", to: "/#home" },
+    { name: "Events", to: "/#events" },
+    { name: "Team", to: "/team#team" },
+    { name: "Contact", to: "/contact#contact" },
   ];
 
   return (
@@ -33,15 +34,14 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-20">
             {navItems.map((item) => (
-              <Link
+              <HashLink
                 key={item.name}
+                smooth
                 to={item.to}
-                smooth={true}
-                duration={500}
                 className="cursor-pointer text-xl lg:text-[1.3rem] font-medium hover:text-white transition duration-300"
               >
                 {item.name}
-              </Link>
+              </HashLink>
             ))}
           </div>
 
@@ -49,7 +49,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md  text-slate-200  transition duration-300"
+              className="p-2 rounded-md text-slate-200 transition duration-300"
               aria-label="Toggle menu"
             >
               {isOpen ? (
@@ -69,20 +69,19 @@ const Navbar = () => {
           opacity: isOpen ? 1 : 0,
           height: isOpen ? "auto" : 0,
         }}
-        className={`md:hidden bg-black overflow-hidden transition-all duration-300`}
+        className="md:hidden bg-black overflow-hidden transition-all duration-300"
       >
         <div className="px-4 pt-4 pb-6 space-y-4">
           {navItems.map((item) => (
-            <Link
+            <HashLink
               key={item.name}
+              smooth
               to={item.to}
-              smooth={true}
-              duration={500}
-              onClick={() => setIsOpen(false)}
+              onClick={() => setIsOpen(false)} // Close menu on click
               className="block text-lg font-semibold hover:text-slate-100 transition duration-300"
             >
               {item.name}
-            </Link>
+            </HashLink>
           ))}
         </div>
       </motion.div>

@@ -1,25 +1,24 @@
-import { useState } from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Team from './components/Team'
-import Events from './components/Events'
-import Vision from './components/Vision'
-import Chatbot from './components/Chatbot'
-import Footer from './components/Footer'
-import './App.css'
+import { HashRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Team from "./components/Team";
+import HomePage from "./components/HomePage";
+import Footer from "./components/Footer";
+import Contact from "./components/Contact";
+import "./App.css";
 
 function App() {
   return (
-    <div className="min-h-screen bg-primary-black text-white">
+    <HashRouter>
       <Navbar />
-      <Hero />
-      <Team />
-      <Events />
-      <Vision />
-      <Chatbot />
+      <Routes>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/team" element={<Team />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
-    </div>
-  )
+    </HashRouter>
+  );
 }
 
-export default App
+export default App;

@@ -51,13 +51,13 @@ const Team = () => {
           {teamMembers.map((member, index) => (
             <motion.div
               key={member.name}
-              initial={{ opacity: 0, y: 20, rotateX: 180 }}
-              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-              whileHover={{ scaleX: 1.01 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              initial={{ opacity: 0, y: 20, rotateY: 60 }}
+              whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
+              whileHover={{ y: -20 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group"
             >
-              <div className="bg-primary-darkGray border-2 border-slate-600 rounded-2xl p-8 shadow-xl transition-transform duration-300 group-hover:-translate-y-2">
+              <div className="  text-center  rounded-2xl p-8 shadow-xl">
                 <div className="relative mb-6">
                   <img
                     src={member.image}
@@ -70,32 +70,6 @@ const Team = () => {
                   {member.name}
                 </h3>
                 <p className="text-primary-lightBlue mb-6">{member.role}</p>
-                <div className="flex justify-center space-x-4">
-                  <a
-                    href={member.linkedin}
-                    className="text-gray-400 hover:text-primary-lightBlue transition-colors"
-                  >
-                    <FaLinkedin size={22} />
-                  </a>
-                  <a
-                    href={member.twitter}
-                    className="text-gray-400 hover:text-primary-lightBlue transition-colors"
-                  >
-                    <FaTwitter size={22} />
-                  </a>
-                  <a
-                    href={member.github}
-                    className="text-gray-400 hover:text-primary-lightBlue transition-colors"
-                  >
-                    <FaGithub size={22} />
-                  </a>
-                  <a
-                    href={member.email}
-                    className="text-gray-400 hover:text-primary-lightBlue transition-colors"
-                  >
-                    <FaEnvelope size={22} />
-                  </a>
-                </div>
               </div>
             </motion.div>
           ))}
