@@ -26,7 +26,7 @@ const Footer = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5 }}
           >
             <h3 className="text-xl font-bold mb-4">Contact</h3>
             <p className="flex items-center mb-2 text-gray-300">
@@ -41,7 +41,7 @@ const Footer = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.5 }}
           >
             <h3 className="text-xl font-bold mb-4">Social Media</h3>
             <div className="flex   gap-5 justify-start">
@@ -77,7 +77,7 @@ const Footer = () => {
           className="mt-12  text-center text-gray-400"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          transition={{ duration: 0.5 }}
         >
           © 2025 Your Company. All rights reserved.
         </motion.div>
