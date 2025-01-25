@@ -28,7 +28,7 @@ const Hero = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Welcome to
+            Welcome to <br></br>
             <span
               className="text-gray-400 text-5xl md:text-5xl lg:text-7xl"
               style={{
