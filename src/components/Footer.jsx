@@ -5,6 +5,14 @@ import {
   EnvelopeIcon,
   PhoneIcon,
 } from "@heroicons/react/24/outline";
+import {
+  FaLinkedin,
+  FaTwitter,
+  FaGithub,
+  FaEnvelope,
+  FaFacebook,
+  FaInstagram,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -42,31 +50,31 @@ const Footer = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <h3 className="text-xl font-bold mb-4">Social</h3>
-            <div className="flex space-x-4">
+            <h3 className="text-xl font-bold mb-4">Social Media</h3>
+            <div className="flex   gap-5 justify-start">
               <motion.a
                 href="#"
                 className="text-gray-300 hover:text-white transition duration-300"
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Facebook
+                <FaInstagram size={30} />
               </motion.a>
               <motion.a
                 href="#"
                 className="text-gray-300 hover:text-white transition duration-300"
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Twitter
+                <FaLinkedin size={30} />
               </motion.a>
               <motion.a
                 href="#"
                 className="text-gray-300 hover:text-white transition duration-300"
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.95 }}
               >
-                LinkedIn
+                <FaTwitter size={30} />
               </motion.a>
             </div>
           </motion.div>
@@ -78,7 +86,7 @@ const Footer = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          © 2023 Your Company. All rights reserved.
+          © 2025 Your Company. All rights reserved.
         </motion.div>
       </div>
     </footer>

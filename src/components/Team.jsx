@@ -1,33 +1,20 @@
 import { motion } from "framer-motion";
-import { FaLinkedin, FaTwitter, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const teamMembers = [
   {
     name: "John Doe",
     role: "CEO & Founder",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
-    linkedin: "#",
-    twitter: "#",
-    github: "#",
-    email: "#",
   },
   {
     name: "Jane Smith",
     role: "CTO",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
-    linkedin: "#",
-    twitter: "#",
-    github: "#",
-    email: "#",
   },
   {
     name: "Mike Johnson",
     role: "Lead Developer",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
-    linkedin: "#",
-    twitter: "#",
-    github: "#",
-    email: "#",
   },
 ];
 
