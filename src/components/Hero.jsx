@@ -7,7 +7,7 @@ const Hero = () => {
   const navigate = useNavigate();
   return (
     <section
-      className="bg-black text-white  pt-24 md:py-32 flex items-center overflow-hidden"
+      className="bg-black text-white py-16 sm:py-20 md:py-32 flex items-center overflow-hidden"
       id="home"
     >
       <div className="container mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center gap-8">
@@ -28,16 +28,8 @@ const Hero = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Welcome to <br></br>
-            <span
-              className="text-gray-400 text-5xl md:text-5xl lg:text-7xl"
-              style={{
-                letterSpacing: "1px",
-              }}
-            >
-              {" "}
-              ALPHA Tinkerer's
-            </span>
+            Welcome to
+            <span className="text-gray-400"> ALPHA Tinkerer's</span>
           </motion.h1>
           <motion.p
             className="text-base sm:text-lg md:text-xl text-gray-300 mb-8"
