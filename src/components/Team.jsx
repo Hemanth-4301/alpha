@@ -21,7 +21,7 @@ const teamMembers = [
 const Team = () => {
   return (
     <section id="team" className="py-20 bg-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[100vh]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[100vp]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
