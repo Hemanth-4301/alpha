@@ -83,7 +83,7 @@ const Footer = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          © 2025 Your Company. All rights reserved.
+          © 2025 ALPHA Tinkerers'. All rights reserved.
         </motion.div>
       </div>
     </footer>
