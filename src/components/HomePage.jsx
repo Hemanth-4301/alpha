@@ -8,8 +8,8 @@ function HomePage() {
   return (
     <div>
       <Hero />
-      <Events />
       <Vision />
+      <Events />
       <Chatbot />
     </div>
   );

@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
+import { FaLightbulb } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,20 +20,13 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full bg-black text-slate-300 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <motion.div
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="flex-shrink-0"
-          >
-            <h1 className="text-2xl font-extrabold tracking-wide cursor-pointer hover:text-slate-100 transition duration-300">
-              MyBrand
+        <div className="flex items-center justify-between  h-16">
+          <div className="flex-shrink-0">
+            <h1 className="flex gap-2 justify-center items-center text-2xl font-extrabold tracking-wide cursor-pointer hover:text-slate-100 transition duration-300">
+              <FaLightbulb size={36} /> Tinkerers
             </h1>
-          </motion.div>
+          </div>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex space-x-20">
             {navItems.map((item) => (
               <HashLink

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import robo from "../assets/robo2.png";
 import { useNavigate } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -10,8 +11,7 @@ const Hero = () => {
       className="bg-black text-white pt-24 md:py-32 flex items-center overflow-hidden"
       id="home"
     >
-      <div className="container mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center gap-8">
-        {/* Text Section */}
+      <div className="container mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center gap-10 md:gap-1">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -58,7 +58,6 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Image Section */}
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -72,7 +71,7 @@ const Hero = () => {
           <motion.img
             src={robo}
             alt="Hero"
-            className="rounded-lg shadow-2xl max-w-full h-auto"
+            className="rounded-lg shadow-2xl max-w-full h-auto "
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.4 }}
           />
