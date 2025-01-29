@@ -7,6 +7,9 @@ import i5 from "../assets/team_members/Hanok John .jpg";
 import i6 from "../assets/team_members/Kotha Jyothi Venkata Sai sankar.jpg";
 import i7 from "../assets/team_members/Sanjeev .jpg";
 import i8 from "../assets/team_members/Abhishek.jpg";
+import i9 from "../assets/team_members/Thanusha A Patel .jpg";
+import i10 from "../assets/team_members/Anushree G.jpg";
+import i11 from "../assets/team_members/Akshay.jpg";
 
 const teamMembers = [
   {
@@ -50,9 +53,19 @@ const teamMembers = [
     image: i8,
   },
   {
-    name: "Niroop NR",
+    name: "Thanusha A Patel",
     role: "Student Council Member",
-    image: i1,
+    image: i9,
+  },
+  {
+    name: "Anushree G",
+    role: "Student Council Member",
+    image: i10,
+  },
+  {
+    name: "Akshay",
+    role: "Student Council Member",
+    image: i11,
   },
 ];
 

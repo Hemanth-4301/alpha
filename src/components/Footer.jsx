@@ -9,7 +9,7 @@ import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white pt-8 pb-8 border-t border-slate-600">
+    <footer className="bg-black  text-slate-300 pt-8 pb-8 border-t border-slate-600">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
           <motion.div
@@ -19,7 +19,7 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-xl font-bold mb-4">Location</h3>
-            <p className=" text-gray-300 flex items-center">
+            <p className="  flex items-center">
               <MapPinIcon className="h-5 w-5 mr-2 text-gray-400" />
               <p>NIE (NORTH) , Mysore , Karnataka</p>
             </p>
@@ -31,11 +31,11 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-xl font-bold mb-4">Contact</h3>
-            <p className="flex items-center mb-2 text-gray-300">
+            <p className="flex items-center mb-2 ">
               <PhoneIcon className="h-5 w-5 mr-2 text-gray-400" />
               +91 70198 70120
             </p>
-            <p className="flex items-center text-gray-300">
+            <p className="flex items-center ">
               <EnvelopeIcon className="h-5 w-5 mr-2 text-gray-400" />
               alphatinkererslab@nie.ac.in
             </p>
@@ -50,7 +50,7 @@ const Footer = () => {
             <div className="flex   gap-5 justify-start">
               <motion.a
                 href="#"
-                className="text-gray-300 hover:text-white transition duration-300"
+                className=" hover:text-white transition duration-300"
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -58,7 +58,7 @@ const Footer = () => {
               </motion.a>
               <motion.a
                 href="https://www.linkedin.com/company/alpha-tinkerers-lab-nie/"
-                className="text-gray-300 hover:text-white transition duration-300"
+                className=" hover:text-white transition duration-300"
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -66,7 +66,7 @@ const Footer = () => {
               </motion.a>
               <motion.a
                 href="#"
-                className="text-gray-300 hover:text-white transition duration-300"
+                className=" hover:text-white transition duration-300"
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.95 }}
               >

@@ -41,11 +41,11 @@ const Vision = () => {
                 duration: 0.6,
                 delay: index * 0.1,
                 type: "spring",
-                stiffness: 100,
+                stiffness: 200,
               }}
               className="group"
             >
-              <div className="bg-primary-darkGray border mx-3 flex flex-col justify-center items-center text-center border-slate-400 rounded-2xl p-4 h-full shadow-xl transition-transform duration-300 group-hover:-translate-y-2">
+              <div className="bg-black border border-slate-600 mx-3 flex flex-col justify-center items-center text-center rounded-2xl p-4 h-full shadow-xl transition-transform duration-300 group-hover:-translate-y-2">
                 <div
                   className={
                     "w-10 h-10 rounded-2xl bg-gradient-to-r flex items-center justify-center mb-2 transform transition-transform group-hover:scale-110"

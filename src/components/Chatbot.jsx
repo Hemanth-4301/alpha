@@ -75,8 +75,13 @@ const Chatbot = () => {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 100 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            className="fixed bottom-0  right-0  w-full sm:w-96 md:w-[448px] h-[90vh] sm:h-[600px]  rounded-lg sm:rounded-lg shadow-2xl overflow-hidden z-50 flex flex-col p-5  "
+            transition={{
+              duration: 0.4,
+              ease: "easeOut",
+              type: "spring",
+              stiffness: 300,
+            }}
+            className="fixed bottom-0  right-0  w-full sm:w-96 md:w-[448px] h-[90vh] sm:h-[600px]  rounded-lg sm:rounded-lg shadow-2xl overflow-hidden  flex flex-col p-5  z-50"
           >
             <div className="bg-slate-800 text-white p-4 flex justify-between items-center  rounded-t-xl ">
               <h3 className="font-semibold text-lg">

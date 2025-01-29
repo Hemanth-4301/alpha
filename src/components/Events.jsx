@@ -69,7 +69,7 @@ const Events = () => {
                 </div>
               </div>
               <div className="w-full sm:w-5/12 z-10">
-                <div className="bg-primary-darkGray p-6 sm:p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 ">
+                <div className="bg-black border border-slate-700 p-6 sm:p-8 rounded-2xl shadow-xl hover:shadow-2xl  hover:border-slate-400 transition-shadow duration-300 ">
                   <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3">
                     {event.title}
                   </h3>
