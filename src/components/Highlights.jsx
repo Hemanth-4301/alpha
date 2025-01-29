@@ -36,7 +36,7 @@ const Highlights = () => {
           Highlights
         </h2>
 
-        <div className="relative">
+        <div className="relative mx-4">
           <Slider ref={setSliderRef} {...settings}>
             {images.map((image, index) => (
               <div key={index} className="carousel-slide">
