@@ -19,9 +19,9 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-xl font-bold mb-4">Location</h3>
-            <p className="flex items-center text-gray-300">
+            <p className=" text-gray-300 flex items-center">
               <MapPinIcon className="h-5 w-5 mr-2 text-gray-400" />
-              123 Main St, City, Country
+              <p>NIE (NORTH) , Mysore , Karnataka</p>
             </p>
           </motion.div>
           <motion.div
@@ -33,11 +33,11 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Contact</h3>
             <p className="flex items-center mb-2 text-gray-300">
               <PhoneIcon className="h-5 w-5 mr-2 text-gray-400" />
-              +1 (123) 456-7890
+              +91 70198 70120
             </p>
             <p className="flex items-center text-gray-300">
               <EnvelopeIcon className="h-5 w-5 mr-2 text-gray-400" />
-              info@example.com
+              alphatinkererslab@nie.ac.in
             </p>
           </motion.div>
           <motion.div
@@ -57,7 +57,7 @@ const Footer = () => {
                 <FaInstagram size={30} className="text-gray-400" />
               </motion.a>
               <motion.a
-                href="#"
+                href="https://www.linkedin.com/company/alpha-tinkerers-lab-nie/"
                 className="text-gray-300 hover:text-white transition duration-300"
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.95 }}

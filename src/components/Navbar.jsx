@@ -18,12 +18,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed w-full bg-black text-slate-300 z-50 shadow-lg">
+    <nav className="fixed w-full bg-black text-slate-50 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between  h-16">
           <div className="flex-shrink-0">
-            <h1 className="flex gap-2 justify-center items-center text-2xl font-extrabold tracking-wide cursor-pointer hover:text-slate-100 transition duration-300">
-              <FaLightbulb size={36} /> Tinkerers
+            <h1 className="flex gap-1 justify-center items-center text-2xl font-extrabold tracking-wide cursor-pointer hover:text-slate-100 transition duration-300">
+              <FaLightbulb size={36} className="text-sky-400" /> Tinkerers
             </h1>
           </div>
 
@@ -48,9 +48,9 @@ const Navbar = () => {
               aria-label="Toggle menu"
             >
               {isOpen ? (
-                <IoCloseSharp size={28} className="text-slate-100" />
+                <IoCloseSharp size={30} className="text-slate-100" />
               ) : (
-                <HiOutlineMenuAlt4 size={28} className="text-slate-100" />
+                <HiOutlineMenuAlt4 size={30} className="text-slate-100" />
               )}
             </button>
           </div>

@@ -1,20 +1,58 @@
 import { motion } from "framer-motion";
+import i1 from "../assets/team_members/Niroop NR.jpg";
+import i2 from "../assets/team_members/Suraj G Rao .png";
+import i3 from "../assets/team_members/Karthikeya S.jpg";
+import i4 from "../assets/team_members/Abhishek.jpg";
+import i5 from "../assets/team_members/Hanok John .jpg";
+import i6 from "../assets/team_members/Kotha Jyothi Venkata Sai sankar.jpg";
+import i7 from "../assets/team_members/Sanjeev .jpg";
+import i8 from "../assets/team_members/Hemanth Kumar.jpg";
 
 const teamMembers = [
   {
-    name: "John Doe",
-    role: "CEO & Founder",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+    name: "Niroop NR",
+    role: "Manager",
+    image: i1,
   },
   {
-    name: "Jane Smith",
-    role: "CTO",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+    name: "Suraj G Rao",
+    role: "Manager",
+    image: i2,
   },
   {
-    name: "Mike Johnson",
-    role: "Lead Developer",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+    name: "Karthikeya S",
+    role: "Student Council Member",
+    image: i3,
+  },
+  {
+    name: "Abhishek",
+    role: "Student Council Member",
+    image: i4,
+  },
+  {
+    name: "Hanok John",
+    role: "Student Council Member",
+    image: i5,
+  },
+  {
+    name: "Kotha Jyothi Venkata Sai sankar",
+    role: "Student Council Member",
+    image: i6,
+  },
+  {
+    name: "Sanjeev",
+    role: "Student Council Member",
+    image: i7,
+  },
+  {
+    name: "Hemanth ",
+    role: "Student Council Member",
+    image: i8,
+  },
+  {
+    name: "Niroop NR",
+    role: "Student Council Member",
+    image: i1,
   },
 ];
 
@@ -30,7 +68,8 @@ const Team = () => {
         >
           <h2 className="text-4xl font-bold text-white mb-4">Our Team</h2>
           <p className="text-gray-400 text-lg">
-            Meet the innovators behind our success
+            Get to know the minds behind our vision. They think, build, and
+            grow. Their passion drives us forward.
           </p>
         </motion.div>
 

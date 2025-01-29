@@ -8,7 +8,7 @@ const Hero = () => {
   const navigate = useNavigate();
   return (
     <section
-      className="bg-black text-white pt-24 md:py-32 flex items-center overflow-hidden"
+      className="bg-black text-slate-300 pt-24 md:py-32 flex items-center overflow-hidden"
       id="home"
     >
       <div className="container mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center gap-10 md:gap-1">
@@ -29,7 +29,8 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             Welcome to
-            <span className="text-sky-300"> ALPHA Tinkerers'</span>
+            <span className="text-sky-300"> ALPHA Tinkerers' </span>
+            <span className="text-slate-300">Lab</span>
           </motion.h1>
           <motion.p
             className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8"

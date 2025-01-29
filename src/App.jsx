@@ -5,7 +5,6 @@ import Team from "./components/Team";
 import HomePage from "./components/HomePage";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
-import "./App.css";
 import About from "./components/About";
 
 function App() {

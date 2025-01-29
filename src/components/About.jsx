@@ -23,7 +23,7 @@ function About() {
 
         <div className="lg:w-1/2 mt-2 lg:mt-0 text-center lg:text-left">
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-[50px]">
-            About Alpha Tinkerers' Lab
+            About ALPHA Tinkerers' Lab
           </h1>
           <p className="text-lg text-gray-300 leading-relaxed">
             Alpha Tinkers Lab is a hub for innovation and creativity, empowering

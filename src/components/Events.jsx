@@ -3,37 +3,40 @@ import { FaCalendarAlt, FaMapMarkerAlt, FaUsers } from "react-icons/fa";
 
 const events = [
   {
-    date: "March 2024",
+    date: "will be announced soon",
     title: "Annual Tech Conference",
     description: "Join us for our biggest tech event of the year",
-    location: "New York City",
-    attendees: "500+",
+    location: "NIE (North)",
+    attendees: "100+",
   },
   {
-    date: "April 2024",
+    date: "will be announced soon",
     title: "Developer Workshop Series",
     description: "Learn from industry experts in our intensive workshop series",
-    location: "San Francisco",
-    attendees: "200+",
+    location: "NIE (North)",
+    attendees: "100+",
   },
   {
-    date: "May 2024",
+    date: "will be announced soon",
     title: "Global Networking Summit",
     description: "Connect with professionals from around the world",
-    location: "London",
-    attendees: "300+",
+    location: "NIE (North)",
+    attendees: "100+",
   },
 ];
 
 const Events = () => {
   return (
-    <section id="events" className="py-20 bg-primary-black overflow-hidden ">
+    <section
+      id="events"
+      className="py-10 md:py-14 bg-primary-black overflow-hidden "
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-14"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Upcoming Events
