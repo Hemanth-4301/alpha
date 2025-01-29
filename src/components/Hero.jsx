@@ -54,6 +54,7 @@ const Hero = () => {
               className="bg-black text-white px-6 py-3 rounded-full shadow-md border border-white hover:bg-white hover:text-black transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => navigate("/#events")}
             >
               Get Started
             </motion.button>
