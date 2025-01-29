@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import i1 from "../assets/team_members/Niroop NR.jpg";
 import i2 from "../assets/team_members/Suraj G Rao .png";
 import i3 from "../assets/team_members/Karthikeya S.jpg";
-import i4 from "../assets/team_members/Abhishek.jpg";
+import i4 from "../assets/team_members/Hemanth Kumar.jpg";
 import i5 from "../assets/team_members/Hanok John .jpg";
 import i6 from "../assets/team_members/Kotha Jyothi Venkata Sai sankar.jpg";
 import i7 from "../assets/team_members/Sanjeev .jpg";
-import i8 from "../assets/team_members/Hemanth Kumar.jpg";
+import i8 from "../assets/team_members/Abhishek.jpg";
 
 const teamMembers = [
   {
@@ -25,7 +25,7 @@ const teamMembers = [
     image: i3,
   },
   {
-    name: "Abhishek",
+    name: "Hemanth ",
     role: "Student Council Member",
     image: i4,
   },
@@ -45,7 +45,7 @@ const teamMembers = [
     image: i7,
   },
   {
-    name: "Hemanth ",
+    name: "Abhishek",
     role: "Student Council Member",
     image: i8,
   },
@@ -80,7 +80,12 @@ const Team = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ y: -20 }}
-              transition={{ duration: 0.1, delay: index * 0.1 }}
+              transition={{
+                duration: 0.1,
+                delay: index * 0.1,
+                type: "spring",
+                stiffness: 200,
+              }}
               viewport={{ once: true }}
               className="group"
             >

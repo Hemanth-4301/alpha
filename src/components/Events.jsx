@@ -29,7 +29,7 @@ const Events = () => {
   return (
     <section
       id="events"
-      className="py-10 md:py-14 bg-primary-black overflow-hidden "
+      className="py-2 md:py-14 bg-primary-black overflow-hidden "
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -54,7 +54,7 @@ const Events = () => {
               key={event.title}
               initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6, type: "spring", stiffness: 90 }}
               className={`flex flex-col sm:flex-row items-center sm:items-stretch justify-between mb-12 sm:mb-16 ${
                 index % 2 === 0 ? "sm:flex-row-reverse" : ""
               }`}

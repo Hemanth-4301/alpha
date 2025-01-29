@@ -80,11 +80,11 @@
 
 @media (max-width: 768px) {
   .carousel-container {
-    padding: 40px;
+    padding: 15px;
   }
 
   .carousel-image {
-    max-height: 300px;
+    max-height: 350px;
   }
 
   .image-description {
@@ -100,7 +100,7 @@
 
 @media (max-width: 480px) {
   .carousel-image {
-    max-height: 200px;
+    max-height: 250px;
     margin-bottom: 20px;
   }
 

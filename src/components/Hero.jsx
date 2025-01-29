@@ -18,7 +18,8 @@ const Hero = () => {
           transition={{
             duration: 0.6,
             ease: "easeOut",
-            stiffness: 300,
+            type: "spring",
+            stiffness: 200,
           }}
           className="md:w-1/2 text-center md:text-left"
         >
@@ -65,7 +66,8 @@ const Hero = () => {
           transition={{
             duration: 0.8,
             ease: "easeOut",
-            stiffness: 300,
+            stiffness: 200,
+            type: "spring",
           }}
           className="md:w-1/2 flex justify-center"
         >

@@ -21,10 +21,6 @@ const Highlights = () => {
       src: h2,
       alt: "Image 2",
     },
-    {
-      src: h3,
-      alt: "Image 3",
-    },
   ];
 
   const settings = {
@@ -51,13 +47,11 @@ const Highlights = () => {
           {images.map((image, index) => (
             <div key={index} className="carousel-slide">
               <motion.img
-                initial={{ scale: 0.8, y: -100 }}
-                whileInView={{ scale: 1, y: 0 }}
-                transition={{ duration: 5, type: "spring", stiffness: 100 }}
+                initial={{ y: -10 }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 0.6 }}
                 src={image.src}
                 alt={image.alt}
-                height={400}
-                width={400}
                 className="carousel-image border-1 border-slate-500"
               />
             </div>

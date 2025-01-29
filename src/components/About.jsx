@@ -21,7 +21,12 @@ function About() {
           />
         </div>
 
-        <div className="lg:w-1/2 mt-2 lg:mt-0 text-center lg:text-left">
+        <motion.div
+          initial={{ y: 200 }}
+          whileInView={{ y: 0 }}
+          transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
+          className="lg:w-1/2 mt-2 lg:mt-0 text-center lg:text-left"
+        >
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-[50px]">
             About ALPHA Tinkerers' Lab
           </h1>
@@ -33,7 +38,7 @@ function About() {
             cutting-edge technologies, our lab is the perfect place for
             tinkerers to thrive. Join us and turn your ideas into reality!
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
