@@ -31,12 +31,11 @@ function About() {
             About ALPHA Tinkerers' Lab
           </h1>
           <p className="text-lg text-gray-300 leading-relaxed">
-            Alpha Tinkers Lab is a hub for innovation and creativity, empowering
-            individuals to bring their ideas to life. We focus on fostering a
-            collaborative environment where technology and engineering merge to
-            solve real-world problems. From building prototypes to exploring
-            cutting-edge technologies, our lab is the perfect place for
-            tinkerers to thrive. Join us and turn your ideas into reality!
+            At ALPHA Tinkerers' Lab, we believe in learning by doing. From
+            AI-powered solutions to sustainable tech innovations, we provide a
+            hands-on environment where ideas come to life. Whether you're a
+            student, researcher, or entrepreneur, this is your space to build,
+            experiment, and innovate.
           </p>
         </motion.div>
       </div>

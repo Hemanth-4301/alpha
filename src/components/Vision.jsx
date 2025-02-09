@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
-import { FaEye, FaBullseye } from "react-icons/fa";
+import { FaLightbulb, FaRocket } from "react-icons/fa";
 
-const visionCards = [
-  {
-    title: "Our Vision",
-    description:
-      "To establish Alpha Tinkerers' Lab as a hub for innovation, creativity, and technological advancement, fostering a community of problem solvers and thinkers.",
-    icon: FaEye,
-  },
+const sections = [
   {
     title: "Our Mission",
     description:
-      "To empower students and professionals with cutting-edge technological skills, hands-on experience, and mentorship, driving innovation and impactful solutions.",
-    icon: FaBullseye,
+      "Empowering students and researchers by providing an innovation-driven workspace to build, prototype, and solve real-world challenges.",
+    icon: FaLightbulb,
+  },
+  {
+    title: "Our Vision",
+    description:
+      "To transform ALPHA Tinkerers' Lab into a globally recognized innovation hub, where students and professionals collaborate to create sustainable and tech-driven solutions for a better future.",
+    icon: FaRocket,
   },
 ];
 
@@ -32,9 +32,9 @@ const Vision = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {visionCards.map((card, index) => (
+          {sections.map((section, index) => (
             <motion.div
-              key={card.title}
+              key={section.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
@@ -45,18 +45,14 @@ const Vision = () => {
               }}
               className="group"
             >
-              <div className="bg-black border border-slate-600 mx-3 flex flex-col justify-center items-center text-center rounded-2xl p-4 h-full shadow-xl transition-transform duration-300 group-hover:-translate-y-2">
-                <div
-                  className={
-                    "w-10 h-10 rounded-2xl bg-gradient-to-r flex items-center justify-center mb-2 transform transition-transform group-hover:scale-110"
-                  }
-                >
-                  <card.icon size={32} className="text-white" />
+              <div className="bg-black border border-slate-600 flex flex-col justify-center items-center text-center rounded-2xl p-6 h-full shadow-xl transition-transform duration-300 group-hover:-translate-y-2">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-r flex items-center justify-center mb-4 transform transition-transform group-hover:scale-110">
+                  <section.icon size={36} className="text-white" />
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-4">
-                  {card.title}
+                  {section.title}
                 </h3>
-                <p className="text-gray-400 mb-6">{card.description}</p>
+                <p className="text-gray-300">{section.description}</p>
               </div>
             </motion.div>
           ))}

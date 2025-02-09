@@ -11,12 +11,11 @@ const faqs = [
   {
     question: "How can I join your team?",
     answer:
-      "Visit our careers page and submit your application for open positions.",
+      "Visit our lab in the college and submit your application for open positions.",
   },
   {
     question: "Where are you located?",
-    answer:
-      "We have offices in major cities worldwide with our headquarters in New York.",
+    answer: "The lab is located at NIE (North), Mysuru, Karnataka, India.",
   },
 ];
 
