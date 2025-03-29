@@ -9,7 +9,6 @@ import About from "./components/About";
 import NotFound from "./components/NotFound";
 import Vision from "./components/Vision";
 import Departments from "./components/Departments";
-import DepartmentDetail from "./components/DepartmentDetail";
 
 function App() {
   return (
@@ -21,7 +20,6 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/dept" element={<Departments />} />
-        <Route path="/dept/:name" element={<DepartmentDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

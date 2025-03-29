@@ -354,9 +354,9 @@ const Team = () => {
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sky-300 hover:text-slate-400 transition duration-300"
+                      className="text-white hover:text-slate-400 transition duration-300"
                     >
-                      <FaLinkedin className="w-6 h-6 mx-auto" />
+                      <FaLinkedin className="w-6 h-6 mx-auto text-white" />
                     </a>
                   </div>
                 </h3>

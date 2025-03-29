@@ -6,9 +6,11 @@ import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { FaLightbulb } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navItems = [
     { name: "Home", to: "/#home" },
@@ -24,7 +26,17 @@ const Navbar = () => {
         <div className="flex items-center justify-between  h-16">
           <div className="flex-shrink-0">
             <h1 className="flex gap-1 justify-center items-center text-2xl font-extrabold tracking-wide cursor-pointer hover:text-slate-100 transition duration-300">
-              <FaLightbulb size={36} className="text-sky-400" /> Tinkerers
+              <HashLink
+                smooth
+                to="/#home"
+                onClick={() => {
+                  setIsOpen(false);
+                  navigate("/#home");
+                }}
+                className="flex items-center gap-1 justify-center"
+              >
+                <FaLightbulb size={36} className="text-sky-400" /> Tinkerers
+              </HashLink>
             </h1>
           </div>
 
