@@ -1,93 +1,180 @@
 import { motion } from "framer-motion";
-import {
-  FaProjectDiagram,
-  FaMoneyBillWave,
-  FaChalkboardTeacher,
-  FaNetworkWired,
-  FaTools,
-  FaBullhorn,
-} from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import developement from "../assets/depts/development.jpeg";
+import financial from "../assets/depts/financial.jpeg";
+import project from "../assets/depts/project.jpeg";
+import networking from "../assets/depts/networking.jpeg";
+import facilities from "../assets/depts/facilities.jpeg";
+import public1 from "../assets/depts/public1.jpeg";
+
+// Import team member images from team.jsx
+import i2 from "../assets/team_members/Suraj G Rao .png";
+import i13 from "../assets/team_members/Inchara Hegde.jpg";
+import i10 from "../assets/team_members/Anushree G.jpg";
+import i14 from "../assets/team_members/Nagashree S.jpg";
+import i16 from "../assets/team_members/Ganesha M.jpg";
+import i9 from "../assets/team_members/Thanusha A Patel .jpg";
 
 const departments = [
   {
     name: "Department of Project Development & Research",
     description:
-      " The Department of Project Development & Research is dedicated to fostering a culture of innovation through hands-on project-based learning and research. We provide students with opportunities to explore, design, and develop impactful solutions by working on real-world challenges. Our goal is to bridge the gap between theoretical knowledge and practical application, encouraging collaboration, creativity, and technical excellence within the lab.",
-    icon: <FaProjectDiagram className="text-white text-4xl" />,
+      "The Department of Project Development & Research is dedicated to fostering a culture of innovation through hands-on project-based learning and research.",
+    image: project,
+    headImage: i2, // Suraj G Rao
+    head: "Suraj G Rao",
   },
   {
     name: "Department of Financial Resources Management",
     description:
-      "The Department of Financial Resources Management at Tinkerers' Lab ensures efficient allocation and utilization of funds to support innovation and creativity. We strategize budgeting, secure sponsorships, and optimize financial planning to empower students in bringing their ideas to life. Our goal is to create a sustainable ecosystem for technological exploration and groundbreaking projects.",
-    icon: <FaMoneyBillWave className="text-white text-4xl" />,
+      "The Department of Financial Resources Management ensures efficient allocation and utilization of funds to support innovation and creativity.",
+    image: financial,
+    headImage: i13, // Inchara G Hegde
+    head: "Inchara G Hegde",
   },
   {
     name: "Program Development and Coordination department",
     description:
-      "The Program Development and Coordination department at ALPHA Tinkerers' Lab is responsible for organizing events, workshops, and hands-on training sessions across both technical and hardware domains. With a focus on software, AI/ML, electromechanical systems, and innovation, we provide a platform for students to learn, experiment, and collaborate. Our goal is to create an engaging learning environment that nurtures creativity, practical problem-solving skills, and interdisciplinary innovation.",
-    icon: <FaChalkboardTeacher className="text-white text-4xl" />,
+      "Responsible for organizing events, workshops, and hands-on training sessions across technical and hardware domains.",
+    image: developement,
+    headImage: i10, // Anushree G
+    head: "Anushree G",
   },
   {
     name: "Department of Networking and Outreach Relations",
     description:
-      "The Department of Networking and Outreach Relations at Tinkerers' Lab is dedicated to building strong connections with industry leaders, academic institutions, and the broader community, fostering collaboration and driving innovation. We facilitate partnerships, sponsorships, and knowledge-sharing opportunities through guest lectures, workshops, networking events, and outreach initiatives. By bridging the gap between aspiring innovators and experts, we create a thriving ecosystem where ideas transform into impactful solutions, reinforcing Tinkerers' Lab as a center for creativity and technical excellence.",
-    icon: <FaNetworkWired className="text-white text-4xl" />,
+      "Dedicated to building strong connections with industry leaders and academic institutions, fostering collaboration and innovation.",
+    image: networking,
+    headImage: i14, // Nagashree S
+    head: "Nagashree S",
   },
   {
     name: "Department of Facilities & Resource Management",
     description:
-      "Ensures the efficient operation of the lab through effective resource management, infrastructure maintenance, and adherence to safety protocols. Focuses on maintaining equipment functionality, optimizing lab operations, and providing an organized environment to support research and project development. The department plays a crucial role in minimizing disruptions, improving operational efficiency, and creating a reliable environment that fosters research and innovation.",
-    icon: <FaTools className="text-white text-4xl" />,
+      "Ensures efficient operation of the lab through effective resource management and infrastructure maintenance.",
+    image: facilities,
+    headImage: i16, // Ganesha M (Note: Team.jsx shows Darshan K S as head but image not available)
+    head: "Darshan K S",
   },
   {
     name: "The Department of Public Affairs & Strategic Management",
     description:
-      "The Department of Public Affairs & Strategic Management at ALPHA Innovation and Tinkerers' Lab is responsible for shaping the lab’s public image, fostering collaborations, and ensuring effective communication. We manage media relations, social media outreach, and event promotions while building partnerships that enhance the lab’s visibility and impact. Through strategic planning and engagement, we create opportunities for knowledge sharing, industry connections, and institutional growth. Our goal is to position ALPHA Innovation and Tinkerers' Lab as a hub for creativity, technology, and excellence, empowering students and innovators to bring their ideas to life.",
-    icon: <FaBullhorn className="text-white text-4xl" />,
+      "Shapes the lab's public image, fosters collaborations, and ensures effective communication.",
+    image: public1,
+    headImage: i9, // Thanusha A Patel
+    head: "Thanusha A Patel",
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+const hoverVariants = {
+  hover: {
+    y: -5,
+    boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.3)",
+  },
+};
+
 const Departments = () => {
+  const navigate = useNavigate();
+
   return (
-    <section id="dept">
-      <div className="min-h-screen bg-black text-white py-24 md:py-32 px-5 md:px-20">
-        <h1 className="text-4xl font-bold text-center mb-10">
+    <section id="dept" className="min-h-screen bg-black">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+        <motion.h1
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-16 text-white"
+        >
           Our Departments
-        </h1>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto ">
+        </motion.h1>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto"
+        >
           {departments.map((dept, index) => (
             <motion.div
-              initial={{ y: -20 }}
-              whileInView={{ y: 0 }}
-              transition={{
-                duration: 0.3,
-                delay: index * 0.1,
-                type: "spring",
-                stiffness: 200,
-              }}
               key={index}
-              className="bg-balck border border-slate-400 hover:border-slate-100 p-6 rounded-xl shadow-lg hover:shadow-2xl flex flex-col items-center text-center"
+              variants={itemVariants}
+              whileHover="hover"
+              variants={hoverVariants}
+              className="group relative bg-gray-900 rounded-2xl overflow-hidden shadow-lg"
             >
-              <motion.div
-                initial={{ rotate: 180 }}
-                whileInView={{ rotate: 0 }}
-                transition={{
-                  duration: 1,
-                  type: "spring",
-                  stiffness: 100,
-                }}
-              >
-                {dept.icon}
-              </motion.div>
-              <h2 className="text-xl font-semibold mb-3 text-white mt-3">
-                {dept.name}
-              </h2>
-              <p className="text-slate-300 text-left mt-4">
-                {dept.description}
-              </p>
+              <div className="aspect-w-16 aspect-h-9 relative">
+                <img
+                  src={dept.image}
+                  alt={dept.name}
+                  className="w-full h-48 object-cover brightness-75 group-hover:brightness-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+              </div>
+
+              <div className="p-6 relative z-10">
+                <div className="flex items-center mb-4">
+                  <img
+                    src={dept.headImage}
+                    alt={dept.head}
+                    className="w-12 h-12 rounded-full object-cover border-2 border-blue-500"
+                  />
+                  <div className="ml-3">
+                    <p className="text-sm text-gray-300">{dept.head}</p>
+                    <p className="text-xs text-gray-400">Department Head</p>
+                  </div>
+                </div>
+
+                <h2 className="text-xl font-bold text-white mb-3 line-clamp-2">
+                  {dept.name}
+                </h2>
+
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={() =>
+                    navigate(`/dept/${encodeURIComponent(dept.name)}`)
+                  }
+                  className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center space-x-2"
+                >
+                  <span>More info</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </motion.button>
+              </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
