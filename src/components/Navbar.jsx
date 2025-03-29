@@ -34,7 +34,7 @@ const Navbar = () => {
                 key={item.name}
                 smooth
                 to={item.to}
-                className="cursor-pointer text-xl lg:text-[1.3rem] font-medium hover:text-white transition duration-300"
+                className="cursor-pointer text-xl lg:text-[1.3rem] font-medium hover:text-slate-500 transition duration-300"
               >
                 {item.name}
               </HashLink>
