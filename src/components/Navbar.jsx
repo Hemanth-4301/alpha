@@ -15,7 +15,7 @@ const Navbar = () => {
     { name: "Team", to: "/team#team" },
     { name: "Departments", to: "/dept#dept" },
     { name: "Events", to: "/#events" },
-    { name: "Contact", to: "/contact#contact" },
+    { name: "About us", to: "/about#about" },
   ];
 
   return (

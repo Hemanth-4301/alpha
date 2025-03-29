@@ -1,5 +1,9 @@
+"use client";
 import { motion } from "framer-motion";
 import { FaLinkedin } from "react-icons/fa";
+import { useCallback } from "react";
+import Particles from "react-particles";
+import { loadSlim } from "tsparticles-slim";
 import narender_sir from "../assets/team_members/narender_sir.jpg";
 import balaji_sir from "../assets/team_members/balaji_sir.jpg";
 import i1 from "../assets/team_members/Niroop NR.jpg";
@@ -115,15 +119,114 @@ const teamMembers = [
 ];
 
 const Team = () => {
+  const particlesInit = useCallback(async (engine) => {
+    await loadSlim(engine);
+  }, []);
+
+  const particlesConfig = {
+    particles: {
+      number: {
+        value: 80,
+        density: {
+          enable: true,
+          value_area: 800,
+        },
+      },
+      color: {
+        value: "#f5f5f5", // Light blue color matching your theme
+      },
+      shape: {
+        type: "circle",
+      },
+      opacity: {
+        value: 0.3,
+        random: true,
+        anim: {
+          enable: true,
+          speed: 5,
+          opacity_min: 0.5,
+          sync: false,
+        },
+      },
+      size: {
+        value: 3,
+        random: true,
+        anim: {
+          enable: true,
+          speed: 2,
+          size_min: 0.1,
+          sync: false,
+        },
+      },
+      line_linked: {
+        enable: true,
+        distance: 80,
+        color: "#4299e1",
+        opacity: 0.5,
+        width: 1,
+      },
+      move: {
+        enable: true,
+        speed: 1,
+        direction: "none",
+        random: true,
+        straight: false,
+        out_mode: "out",
+        bounce: false,
+        attract: {
+          enable: false,
+          rotateX: 600,
+          rotateY: 1200,
+        },
+      },
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: {
+          enable: true,
+          mode: "grab",
+        },
+        onclick: {
+          enable: true,
+          mode: "push",
+        },
+        resize: true,
+      },
+      modes: {
+        grab: {
+          distance: 140,
+          line_linked: {
+            opacity: 0.5,
+          },
+        },
+        push: {
+          particles_nb: 4,
+        },
+      },
+    },
+    retina_detect: true,
+  };
+
   return (
-    <section id="team" className="py-20 bg-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[100vp]">
+    <section id="team" className="py-20 bg-black relative">
+      {/* Particles background */}
+      <div className="absolute inset-0 z-0">
+        <Particles
+          id="tsparticles"
+          init={particlesInit}
+          options={particlesConfig}
+        />
+      </div>
+
+      {/* Content with higher z-index to appear above particles */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[100vp] relative z-10">
         <div className="my-10 mb-20">
           <h2 className="text-4xl font-bold text-white mb-4 text-center ">
             Our Mentors
           </h2>
 
-          <div className="flex  flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -137,12 +240,12 @@ const Team = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="  text-center  rounded-2xl p-8 pb-0 shadow-xl">
+              <div className="text-center rounded-2xl p-8 pb-0 shadow-xl">
                 <div className="relative mb-6">
                   <img
-                    src={narender_sir}
+                    src={narender_sir || "/placeholder.svg"}
                     alt={"mentor-1"}
-                    className="w-40 h-40 rounded-full mx-auto  object-cover ring-4 ring-primary-lightBlue/30"
+                    className="w-40 h-40 rounded-full mx-auto object-cover ring-4 ring-primary-lightBlue/30"
                   />
                   <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-300/30 to-transparent "></div>
                 </div>
@@ -177,12 +280,12 @@ const Team = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="  text-center  rounded-2xl p-8 pb-0 shadow-xl">
+              <div className="text-center rounded-2xl p-8 pb-0 shadow-xl">
                 <div className="relative mb-6">
                   <img
-                    src={balaji_sir}
+                    src={balaji_sir || "/placeholder.svg"}
                     alt={"mentor-2"}
-                    className="w-40 h-40 rounded-full mx-auto  object-cover ring-4 ring-primary-lightBlue/30"
+                    className="w-40 h-40 rounded-full mx-auto object-cover ring-4 ring-primary-lightBlue/30"
                   />
                   <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-lightBlue/20 to-transparent"></div>
                 </div>
@@ -235,12 +338,12 @@ const Team = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="  text-center  rounded-2xl p-8 pb-0 shadow-xl">
+              <div className="text-center rounded-2xl p-8 pb-0 shadow-xl">
                 <div className="relative mb-6">
                   <img
-                    src={member.image}
+                    src={member.image || "/placeholder.svg"}
                     alt={member.name}
-                    className="w-40 h-40 rounded-full mx-auto  object-cover ring-4 ring-primary-lightBlue/30"
+                    className="w-40 h-40 rounded-full mx-auto object-cover ring-4 ring-primary-lightBlue/30"
                   />
                   <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-lightBlue/20 to-transparent"></div>
                 </div>
