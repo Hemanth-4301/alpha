@@ -16,7 +16,7 @@ function About() {
               ease: "linear",
             }}
             src={logo}
-            alt="Alpha Tinkers Lab Logo"
+            alt="Alpha Innovation Tinkers Lab Logo"
             className="w-80 h-80 lg:w-[500px] lg:h-[500px] object-contain"
           />
         </div>
@@ -28,14 +28,14 @@ function About() {
           className="lg:w-1/2 mt-2 lg:mt-0 text-center lg:text-left"
         >
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-[50px]">
-            About ALPHA Tinkerers' Lab
+            About ALPHA Innovation Tinkerers' Lab
           </h1>
           <p className="text-lg text-gray-300 leading-relaxed">
-            At ALPHA Tinkerers' Lab, we believe in learning by doing. From
-            AI-powered solutions to sustainable tech innovations, we provide a
-            hands-on environment where ideas come to life. Whether you're a
-            student, researcher, or entrepreneur, this is your space to build,
-            experiment, and innovate.
+            At ALPHA Innovation Tinkerers' Lab, we believe in learning by doing.
+            From AI-powered solutions to sustainable tech innovations, we
+            provide a hands-on environment where ideas come to life. Whether
+            you're a student, researcher, or entrepreneur, this is your space to
+            build, experiment, and innovate.
           </p>
         </motion.div>
       </div>

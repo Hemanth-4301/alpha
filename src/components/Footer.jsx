@@ -48,14 +48,14 @@ const Footer = () => {
           >
             <h3 className="text-xl font-bold mb-4">Social Media</h3>
             <div className="flex   gap-5 justify-start">
-              <motion.a
+              {/* <motion.a
                 href="#"
                 className=" hover:text-white transition duration-300"
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <FaInstagram size={30} className="text-gray-400" />
-              </motion.a>
+              </motion.a> */}
               <motion.a
                 href="https://www.linkedin.com/company/alpha-tinkerers-lab-nie/"
                 className=" hover:text-white transition duration-300"
@@ -64,14 +64,14 @@ const Footer = () => {
               >
                 <FaLinkedin size={30} className="text-gray-400" />
               </motion.a>
-              <motion.a
+              {/* <motion.a
                 href="#"
                 className=" hover:text-white transition duration-300"
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <FaTwitter size={30} className="text-gray-400" />
-              </motion.a>
+              </motion.a> */}
             </div>
           </motion.div>
         </div>
@@ -83,7 +83,7 @@ const Footer = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          © 2025 ALPHA Tinkerers'. All rights reserved.
+          © 2025 ALPHA Innovation Tinkerers'. All rights reserved.
         </motion.div>
       </div>
     </footer>

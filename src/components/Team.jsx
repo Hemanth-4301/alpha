@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FaLinkedin } from "react-icons/fa";
 import narender_sir from "../assets/team_members/narender_sir.jpg";
 import balaji_sir from "../assets/team_members/balaji_sir.jpg";
 import i1 from "../assets/team_members/Niroop NR.jpg";
@@ -6,69 +7,110 @@ import i2 from "../assets/team_members/Suraj G Rao .png";
 import i3 from "../assets/team_members/Karthikeya S.jpg";
 import i4 from "../assets/team_members/Hemanth Kumar.jpg";
 import i5 from "../assets/team_members/Hanok John .jpg";
-import i6 from "../assets/team_members/Kotha Jyothi Venkata Sai sankar.jpg";
 import i7 from "../assets/team_members/Sanjeev .jpg";
 import i8 from "../assets/team_members/Abhishek.jpg";
 import i9 from "../assets/team_members/Thanusha A Patel .jpg";
 import i10 from "../assets/team_members/Anushree G.jpg";
 import i11 from "../assets/team_members/Akshay.jpg";
+import i12 from "../assets/team_members/CHANDAN G.jpg";
+import i13 from "../assets/team_members/Inchara Hegde.jpg";
+import i14 from "../assets/team_members/Nagashree S.jpg";
+import i15 from "../assets/team_members/Gagan P.jpg";
+import i16 from "../assets/team_members/Ganesha M.jpg";
 
 const teamMembers = [
   {
     name: "Niroop NR",
-    role: "Manager",
+    role: "ALPHA Innovation Tinkerer's Lab Manager",
     image: i1,
+    linkedin: "https://www.linkedin.com/in/niroop-nr-nara/",
   },
   {
     name: "Suraj G Rao",
     role: "Head, Dept of Project Development & Research",
     image: i2,
+    linkedin: "https://www.linkedin.com/in/suraj-g-rao/",
   },
   {
     name: "Thanusha A Patel",
     role: "Head, Dept of Public Affairs & Strategic Engagement",
     image: i9,
+    linkedin: "https://www.linkedin.com/in/thanusha-a-patel-b4b3a2262/",
   },
   {
     name: "Anushree G",
     role: "Head, Dept of Program Development & Co-ordination",
     image: i10,
+    linkedin: "https://www.linkedin.com/in/anushree-g-72974a2b1/",
   },
   {
     name: "Karthikeya S",
     role: "Student Council Member",
     image: i3,
+    linkedin: "https://www.linkedin.com/in/karthikeyas1/",
   },
   {
-    name: "Hemanth ",
+    name: "Hemanth",
     role: "Student Council Member",
     image: i4,
+    linkedin:
+      "https://www.linkedin.com/in/hemanth-kumar-74b939215?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     name: "Hanok John",
     role: "Student Council Member",
     image: i5,
-  },
-  {
-    name: "Kotha Jyothi Venkata Sai sankar",
-    role: "Student Council Member",
-    image: i6,
+    linkedin: "https://www.linkedin.com/in/hanok-john-bennet-896a03269/",
   },
   {
     name: "Sanjeev",
     role: "Student Council Member",
     image: i7,
+    linkedin: "https://www.linkedin.com/in/sai-sanjeev-m-a7a3a0264/",
   },
   {
     name: "Abhishek",
     role: "Student Council Member",
     image: i8,
+    linkedin: "https://www.linkedin.com/in/abhishek-goud-909451259/",
   },
-
   {
     name: "Akshay",
     role: "Student Council Member",
     image: i11,
+    linkedin: "https://www.linkedin.com/in/akshay-sawalagi-71b0741b6/",
+  },
+  {
+    name: "Chandan G",
+    role: "Student Council Member",
+    image: i12,
+    linkedin: "https://www.linkedin.com/in/chandang2004/",
+  },
+  {
+    name: "Inchara Hegde",
+    role: "Head, Dept of Fanancial Management & Resources",
+    image: i13,
+    linkedin: "https://www.linkedin.com/in/inchara-g-hegde/",
+  },
+  {
+    name: "Nagashree S",
+    role: "Student Council Member",
+    image: i14,
+    linkedin: "https://www.linkedin.com/in/nagashrees16/",
+  },
+  {
+    name: "Gagan P",
+    role: "Student Council Member",
+    image: i15,
+    linkedin:
+      "https://www.linkedin.com/in/gagan-puttanna-727698308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+  },
+  {
+    name: "Ganesha M",
+    role: "Student Council Member",
+    image: i16,
+    linkedin:
+      "https://www.linkedin.com/in/ganesha-mohan-aa9615244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
 ];
 
@@ -104,11 +146,21 @@ const Team = () => {
                   />
                   <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-300/30 to-transparent "></div>
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-2">
+                <h3 className="text-2xl font-semibold text-white mb-2 flex justify-center items-center gap-2">
                   Dr. Narender M
+                  <div>
+                    <a
+                      href="https://www.linkedin.com/in/dr-narender-m-428a9638/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sky-300 hover:text-slate-400 transition duration-300"
+                    >
+                      <FaLinkedin className="w-6 h-6 mx-auto" />
+                    </a>
+                  </div>
                 </h3>
                 <p className="text-primary-lightBlue mb-6">
-                  Associate Professor,Dept of CSE
+                  Associate Professor , Dept of CSE
                 </p>
               </div>
             </motion.div>{" "}
@@ -134,11 +186,21 @@ const Team = () => {
                   />
                   <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-lightBlue/20 to-transparent"></div>
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-2">
+                <h3 className="text-2xl font-semibold text-white mb-2 flex justify-center items-center gap-2">
                   Balaji V
+                  <div>
+                    <a
+                      href="https://www.linkedin.com/in/balaji-vijaykumar/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sky-300 hover:text-slate-400 transition duration-300"
+                    >
+                      <FaLinkedin className="w-6 h-6 mx-auto" />
+                    </a>
+                  </div>
                 </h3>
                 <p className="text-primary-lightBlue mb-6">
-                  Assistant Professor, Dept of CSE
+                  Assistant Professor , Dept of CSE
                 </p>
               </div>
             </motion.div>
@@ -183,8 +245,18 @@ const Team = () => {
                   />
                   <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-lightBlue/20 to-transparent"></div>
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-2">
+                <h3 className="text-2xl font-semibold text-white mb-2 flex justify-center items-center gap-2">
                   {member.name}
+                  <div>
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sky-300 hover:text-slate-400 transition duration-300"
+                    >
+                      <FaLinkedin className="w-6 h-6 mx-auto" />
+                    </a>
+                  </div>
                 </h3>
                 <p className="text-primary-lightBlue mb-6">{member.role}</p>
               </div>

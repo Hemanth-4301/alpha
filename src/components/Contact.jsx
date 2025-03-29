@@ -1,142 +1,56 @@
 import { motion } from "framer-motion";
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import React from "react";
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const phoneNumber = "+917019870120";
+  const emailAddress = "alphatinkererslab@nie.ac.in";
 
-  const [isSending, setIsSending] = useState(false);
-  const [statusMessage, setStatusMessage] = useState("");
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleWhatsApp = () => {
+    window.open(`https://wa.me/${phoneNumber}`, "_blank");
   };
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    setIsSending(true);
-    setStatusMessage("");
-
-    emailjs
-      .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        e.target,
-        "YOUR_PUBLIC_KEY"
-      )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          setStatusMessage("Message sent successfully!");
-          setFormData({ name: "", email: "", message: "" });
-        },
-        (error) => {
-          console.log("FAILED...", error);
-          setStatusMessage("Failed to send message. Please try again.");
-        }
-      )
-      .finally(() => setIsSending(false));
+  const handleEmail = () => {
+    window.location.href = `mailto:${emailAddress}`;
   };
 
   return (
     <motion.section
       id="contact"
-      className="py-20 bg-black text-white overflow-hidden"
+      className="py-16 bg-black text-white overflow-hidden"
       initial={{ y: -100, scale: 0.8 }}
       whileInView={{ y: 0, scale: 1 }}
       transition={{ duration: 0.3, type: "spring", stiffness: 200 }}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-20">
-        <h2 className="text-4xl font-bold my-10 text-center text-white">
+      <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
+        <h2 className="text-3xl sm:text-4xl font-bold my-8 text-center text-white">
           Get in Touch
         </h2>
 
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
-          <div className="lg:w-2/3 w-full p-8 rounded-2xl shadow-lg border-2 border-slate-600">
-            <form className="flex flex-col gap-6" onSubmit={sendEmail}>
-              <div>
-                <label
-                  className="block text-sm font-medium mb-2"
-                  htmlFor="name"
-                >
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Enter your name"
-                  className="w-full bg-gray-700 text-white p-4 rounded-md focus:outline-none focus:ring-1 focus:ring-white"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div>
-                <label
-                  className="block text-sm font-medium mb-2"
-                  htmlFor="email"
-                >
-                  Your Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  className="w-full bg-gray-700 text-white p-4 rounded-md focus:outline-none focus:ring-1 focus:ring-white"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div>
-                <label
-                  className="block text-sm font-medium mb-2"
-                  htmlFor="message"
-                >
-                  Your Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  placeholder="Type your message"
-                  className="w-full bg-gray-700 text-white p-4 rounded-md focus:outline-none focus:ring-1 focus:ring-white"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                ></textarea>
-              </div>
+        <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 items-center w-full">
+          <div className="w-full sm:w-3/4 md:w-2/3 p-6 rounded-lg shadow-lg border border-slate-600 bg-black flex flex-col gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-between bg-black border border-slate-500 text-white p-4 rounded-md w-full">
+              <span className="text-base sm:text-lg font-medium break-all">
+                TLB Manager
+              </span>
               <button
-                type="submit"
-                className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-md text-lg font-medium transition duration-200 flex items-center justify-center gap-2"
-                disabled={isSending}
+                onClick={handleWhatsApp}
+                className="mt-3 sm:mt-0 bg-white border  hover:bg-transparent hover:text-white text-black py-2 px-4 rounded-md text-sm font-medium transition duration-200"
               >
-                {isSending ? (
-                  <>
-                    <motion.div
-                      className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"
-                      initial={{ rotate: 0 }}
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 0.5, repeat: Infinity }}
-                    ></motion.div>
-                    Sending...
-                  </>
-                ) : (
-                  "Send Message"
-                )}
+                Message Now
               </button>
-              {statusMessage && (
-                <p className="text-center mt-2 text-sm text-gray-300">
-                  {statusMessage}
-                </p>
-              )}
-            </form>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center justify-between bg-black border border-slate-500 text-white p-4 rounded-md w-full">
+              <span className="text-base sm:text-lg font-medium break-all">
+                {emailAddress}
+              </span>
+              <button
+                onClick={handleEmail}
+                className="mt-3 sm:mt-0 bg-white border  hover:bg-transparent hover:text-white text-black py-2 px-4 rounded-md text-sm font-medium transition duration-200"
+              >
+                Email Now
+              </button>
+            </div>
           </div>
         </div>
       </div>

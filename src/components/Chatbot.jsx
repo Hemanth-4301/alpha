@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     question: "Where are you located?",
-    answer: "The lab is located at NIE (North), Mysuru, Karnataka, India.",
+    answer: "The lab is located inside library building at NIE (North Campus), Mysuru, Karnataka, India.",
   },
 ];
 
