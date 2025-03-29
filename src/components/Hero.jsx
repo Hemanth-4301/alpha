@@ -30,7 +30,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             Welcome to
-            <span className="text-sky-300"> ALPHA Innovation Tinkerers' </span>
+            <span className="text-sky-300"> ALPHA Innovation  & Tinkerers' </span>
             <span className="text-slate-300">Lab</span>
           </motion.h1>
           <motion.p
