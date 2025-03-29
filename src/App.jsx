@@ -7,13 +7,14 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import NotFound from "./components/NotFound";
+import Vision from "./components/Vision";
 
 function App() {
   return (
     <HashRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/" element={<HomePage />} />
         <Route path="/team" element={<Team />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />

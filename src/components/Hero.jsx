@@ -46,15 +46,15 @@ const Hero = () => {
               className="bg-white text-black px-6 py-3 rounded-full shadow-md hover:bg-gray-200 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => navigate("/about#about")}
+              onClick={() => navigate("/contact#contact")}
             >
-              About Us
+              Contact Us
             </motion.button>
             <motion.button
               className="bg-black text-white px-6 py-3 rounded-full shadow-md border border-white hover:bg-white hover:text-black transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => navigate("/#events")}
+              onClick={() => navigate("/about#about")}
             >
               Get Started
             </motion.button>
