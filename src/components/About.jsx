@@ -8,16 +8,16 @@ function About() {
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-20 flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 flex justify-center lg:justify-start">
           <motion.img
-            initial={{ scale: 1 }}
-            whileInView={{ scale: 1, rotateY: 360 }}
+            initial={{ scale: 0.9 }}
+            whileInView={{ scale: 1 }}
             transition={{
-              duration: 5,
-              repeat: Infinity,
-              ease: "linear",
+              duration: 0.6,
+              type: "spring",
+              stiffness: 100,
             }}
             src={logo}
             alt="Alpha Innovation Tinkers Lab Logo"
-            className="w-80 h-80 lg:w-[500px] lg:h-[500px] object-contain"
+            className="w-80 h-80 lg:w-[400px] lg:h-[400px] m-5   shadow-lg rounded-lg"
           />
         </div>
 

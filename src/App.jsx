@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import NotFound from "./components/NotFound";
 import Vision from "./components/Vision";
+import Departments from "./components/Departments";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/team" element={<Team />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route path="/dept" element={<Departments />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

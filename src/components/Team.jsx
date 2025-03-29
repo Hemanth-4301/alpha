@@ -87,14 +87,14 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/chandang2004/",
   },
   {
-    name: "Inchara Hegde",
-    role: "Head, Dept of Fanancial Management & Resources",
+    name: "Inchara G Hegde",
+    role: "Head, Dept of Financial Management & Resources",
     image: i13,
     linkedin: "https://www.linkedin.com/in/inchara-g-hegde/",
   },
   {
     name: "Nagashree S",
-    role: "Student Council Member",
+    role: "Head, Dept of Naetworking & Outreach Relations",
     image: i14,
     linkedin: "https://www.linkedin.com/in/nagashrees16/",
   },
@@ -229,7 +229,6 @@ const Team = () => {
               whileHover={{ y: -20 }}
               transition={{
                 duration: 0.1,
-                delay: index * 0.1,
                 type: "spring",
                 stiffness: 200,
               }}
