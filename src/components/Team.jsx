@@ -256,7 +256,7 @@ const Team = () => {
                       href="https://www.linkedin.com/in/dr-narender-m-428a9638/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sky-300 hover:text-slate-400 transition duration-300"
+                      className="text-white hover:text-slate-400 transition duration-300"
                     >
                       <FaLinkedin className="w-6 h-6 mx-auto" />
                     </a>
@@ -296,7 +296,7 @@ const Team = () => {
                       href="https://www.linkedin.com/in/balaji-vijaykumar/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sky-300 hover:text-slate-400 transition duration-300"
+                      className="text-white hover:text-slate-400 transition duration-300"
                     >
                       <FaLinkedin className="w-6 h-6 mx-auto" />
                     </a>
