@@ -61,8 +61,7 @@ const departments = [
     image: facilitiesImage,
     headImage: ganeshaImage,
     head: "Darshan K S",
-    linkedin:
-      "https://www.linkedin.com/in/ganesha-mohan-aa9615244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    linkedin: "https://www.linkedin.com/in/darshan-k-s-898670265/",
   },
   {
     name: "Department of Public Affairs & Strategic Management",
