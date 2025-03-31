@@ -42,6 +42,18 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/thanusha-a-patel-b4b3a2262/",
   },
   {
+    name: "Inchara G Hegde",
+    role: "Head, Dept of Financial Management & Resources",
+    image: i13,
+    linkedin: "https://www.linkedin.com/in/inchara-g-hegde/",
+  },
+  {
+    name: "Nagashree S",
+    role: "Head, Dept of Naetworking & Outreach Relations",
+    image: i14,
+    linkedin: "https://www.linkedin.com/in/nagashrees16/",
+  },
+  {
     name: "Anushree G",
     role: "Head, Dept of Program Development & Co-ordination",
     image: i10,
@@ -89,18 +101,6 @@ const teamMembers = [
     role: "Student Council Member",
     image: i12,
     linkedin: "https://www.linkedin.com/in/chandang2004/",
-  },
-  {
-    name: "Inchara G Hegde",
-    role: "Head, Dept of Financial Management & Resources",
-    image: i13,
-    linkedin: "https://www.linkedin.com/in/inchara-g-hegde/",
-  },
-  {
-    name: "Nagashree S",
-    role: "Head, Dept of Naetworking & Outreach Relations",
-    image: i14,
-    linkedin: "https://www.linkedin.com/in/nagashrees16/",
   },
   {
     name: "Gagan P",

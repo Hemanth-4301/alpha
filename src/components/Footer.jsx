@@ -9,7 +9,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-slate-300 pt-8 pb-8 border-t border-slate-600 z-10">
+    <footer className="bg-black text-slate-300 pt-8 pb-8 border-t border-slate-600 relative z-10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
           {/* Location Section */}
