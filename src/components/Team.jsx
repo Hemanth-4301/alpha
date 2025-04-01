@@ -223,7 +223,7 @@ const Team = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[100vp] relative z-10">
         <div className="my-10 mb-20">
           <h2 className="text-4xl font-bold text-white mb-4 text-center ">
-            Our Mentors
+            Professor In Charge
           </h2>
 
           <div className="flex flex-wrap justify-center gap-4">
@@ -239,34 +239,7 @@ const Team = () => {
               }}
               viewport={{ once: true }}
               className="group"
-            >
-              <div className="text-center rounded-2xl p-8 pb-0 shadow-xl">
-                <div className="relative mb-6">
-                  <img
-                    src={narender_sir || "/placeholder.svg"}
-                    alt={"mentor-1"}
-                    className="w-40 h-40 rounded-full mx-auto object-cover ring-4 ring-primary-lightBlue/30"
-                  />
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-300/30 to-transparent "></div>
-                </div>
-                <h3 className="text-2xl font-semibold text-white mb-2 flex justify-center items-center gap-2">
-                  Dr. Narender M
-                  <div>
-                    <a
-                      href="https://www.linkedin.com/in/dr-narender-m-428a9638/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white hover:text-slate-400 transition duration-300"
-                    >
-                      <FaLinkedin className="w-6 h-6 mx-auto" />
-                    </a>
-                  </div>
-                </h3>
-                <p className="text-primary-lightBlue mb-6">
-                  Associate Professor , Dept of CSE
-                </p>
-              </div>
-            </motion.div>{" "}
+            ></motion.div>{" "}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -303,7 +276,8 @@ const Team = () => {
                   </div>
                 </h3>
                 <p className="text-primary-lightBlue mb-6">
-                  Assistant Professor , Dept of CSE
+                  Assistant Professor , Dept of CSE-AIML & Head, ALPHA
+                  Innovation & Tinkerers' Lab
                 </p>
               </div>
             </motion.div>
