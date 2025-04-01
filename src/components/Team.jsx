@@ -25,7 +25,7 @@ import i16 from "../assets/team_members/Ganesha M.jpg";
 const teamMembers = [
   {
     name: "Niroop NR",
-    role: "ALPHA Innovation Tinkerer's Lab Manager",
+    role: "ALPHA Innovation & Tinkerer's Lab Manager",
     image: i1,
     linkedin: "https://www.linkedin.com/in/niroop-nr-nara/",
   },
