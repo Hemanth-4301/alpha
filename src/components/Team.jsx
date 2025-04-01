@@ -1,7 +1,7 @@
 "use client";
-import { motion } from "framer-motion";
-import { FaLinkedin } from "react-icons/fa";
-import { useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaLinkedin, FaTimes } from "react-icons/fa";
+import { useCallback, useState } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 import narender_sir from "../assets/team_members/narender_sir.jpg";
@@ -119,6 +119,9 @@ const teamMembers = [
 ];
 
 const Team = () => {
+  const [selectedMember, setSelectedMember] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
   }, []);
@@ -133,7 +136,7 @@ const Team = () => {
         },
       },
       color: {
-        value: "#f5f5f5", // Light blue color matching your theme
+        value: "#f5f5f5",
       },
       shape: {
         type: "circle",
@@ -208,6 +211,17 @@ const Team = () => {
     retina_detect: true,
   };
 
+  const openModal = (member) => {
+    setSelectedMember(member);
+    setIsModalOpen(true);
+    document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    document.body.style.overflow = "auto"; // Re-enable scrolling
+  };
+
   return (
     <section id="team" className="py-20 bg-black relative">
       {/* Particles background */}
@@ -258,7 +272,16 @@ const Team = () => {
                   <img
                     src={balaji_sir || "/placeholder.svg"}
                     alt={"mentor-2"}
-                    className="w-40 h-40 rounded-full mx-auto object-cover ring-4 ring-primary-lightBlue/30"
+                    className="w-40 h-40 rounded-full mx-auto object-cover ring-4 ring-primary-lightBlue/30 cursor-pointer hover:ring-primary-lightBlue/60 transition-all duration-300"
+                    onClick={() =>
+                      openModal({
+                        name: "Balaji V",
+                        role: "Assistant Professor , Dept of CSE-AIML & Head, ALPHA Innovation & Tinkerers' Lab",
+                        image: balaji_sir,
+                        linkedin:
+                          "https://www.linkedin.com/in/balaji-vijaykumar/",
+                      })
+                    }
                   />
                   <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-lightBlue/20 to-transparent"></div>
                 </div>
@@ -317,7 +340,8 @@ const Team = () => {
                   <img
                     src={member.image || "/placeholder.svg"}
                     alt={member.name}
-                    className="w-40 h-40 rounded-full mx-auto object-cover ring-4 ring-primary-lightBlue/30"
+                    className="w-40 h-40 rounded-full mx-auto object-cover ring-4 ring-primary-lightBlue/30 cursor-pointer hover:ring-primary-lightBlue/60 transition-all duration-300"
+                    onClick={() => openModal(member)}
                   />
                   <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-lightBlue/20 to-transparent"></div>
                 </div>
@@ -340,6 +364,83 @@ const Team = () => {
           ))}
         </div>
       </div>
+
+      {/* Modal for member details */}
+      <AnimatePresence>
+        {isModalOpen && selectedMember && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm"
+            onClick={closeModal}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="bg-gray-900 rounded-xl max-w-md w-full mx-4 p-8 relative shadow-2xl border border-primary-lightBlue/20"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={closeModal}
+                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors duration-200"
+              >
+                <FaTimes className="w-6 h-6" />
+              </button>
+
+              <div className="flex flex-col items-center">
+                <motion.div
+                  initial={{ scale: 0.8 }}
+                  animate={{ scale: 1 }}
+                  transition={{ delay: 0.1 }}
+                  className="relative mb-6"
+                >
+                  <img
+                    src={selectedMember.image}
+                    alt={selectedMember.name}
+                    className="w-48 h-48 rounded-full mx-auto object-cover ring-4 ring-primary-lightBlue/50"
+                  />
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-lightBlue/30 to-transparent"></div>
+                </motion.div>
+
+                <motion.h3
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                  className="text-3xl font-bold text-white mb-2 text-center"
+                >
+                  {selectedMember.name}
+                </motion.h3>
+
+                <motion.p
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                  className="text-primary-lightBlue text-lg mb-6 text-center"
+                >
+                  {selectedMember.role}
+                </motion.p>
+
+                <motion.a
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                  href={selectedMember.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-full text-white transition-colors duration-300"
+                >
+                  <FaLinkedin className="w-5 h-5" />
+                  Connect on LinkedIn
+                </motion.a>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
