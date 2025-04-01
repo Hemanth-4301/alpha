@@ -22,7 +22,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Location</h3>
             <p className="flex items-center mb-2">
               <MapPinIcon className="h-5 w-5 mr-2 text-gray-400" />
-              <span>NIE (NORTH), Hootagalli, Mysuru, Karnataka</span>
+              <span>NIE (NORTH), Koorgalli, Mysuru, Karnataka</span>
             </p>
             {/* Google Map Embed */}
             <div className="w-full h-40 md:h-48 lg:h-56">
